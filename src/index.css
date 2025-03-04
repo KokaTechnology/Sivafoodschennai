@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
+
+html,
+body,
+#root,
+.app,
+.content {
+  height: 100%;
+  width: 100%;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.app .rdw-editor-toolbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #f5f5f5;
+  z-index: 999;
+}
+
+.app .rdw-editor-main {
+  border: 0.5px solid #4b4b4b8c;
+  border-radius: 8px;
+  min-height: 50vh;
+  padding-left: 12px;
+}
+.app .rdw-editor-main a {
+  color: #000 !important;
+}
+.app .rdw-dropdownoption-active {
+  background: #f5f5f5;
+}
+
+.app .rdw-dropdownoption-default {
+  min-height: 25px;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+}
+.app .rdw-dropdown-carettoclose {
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  top: 35%;
+  right: 10%;
+  border-bottom: 6px solid black;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+.app .rdw-dropdown-carettoopen {
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  top: 35%;
+  right: 10%;
+  border-top: 6px solid black;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+.app .rdw-dropdown-selectedtext {
+  color: #000 !important;
+}
+
+.content {
+  max-height: 100vh;
+  overflow: auto;
+}
+.app {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  min-width: 100vw;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.ps-sidebar-container::-webkit-scrollbar {
+  display: none;
+}
+
+.ps-sidebar-container::-moz-scrollbar {
+  display: none;
+}
+
+.scrollhost {
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-color: transparent transparent; /*just hides the scrollbar for firefox */
+}
+
+.ps-sidebar-root {
+  border: none !important;
+}
+
+@media screen and (max-width: 500px) {
+  .TopPageBar {
+    display: none !important;
+  }
+}
+::-webkit-calendar-picker-indicator {
+  color: rgba(217, 255, 0, 0);
+  opacity: 1;
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg fill="%23000" fill-opacity=".54" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/%3E%3Cpath d="M0 0h24v24H0z" fill="none"/%3E%3C/svg%3E');
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+  filter: sepia(100%);
+}
+::-webkit-calendar-picker-indicator:hover {
+  -webkit-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.04);
+}
+
+.dayBTn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #5a5a5a;
+  font-size: 14px;
+  font-weight: 700;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.dayBTn:hover {
+  background-color: #4cceab77;
+}
+
+.dayBTn.active {
+  background-color: #4cceac;
+  color: #ffffff;
+  border-color: #4cceac;
+}
+
+.dayQty .qty {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.dayQty {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* togg */
+/* Genel stil */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+  margin: 10px;
+}
+
+/* Giriş stil */
+.toggle-switch .toggle-input {
+  display: none;
+}
+
+/* Anahtarın stilinin etrafındaki etiketin stil */
+.toggle-switch .toggle-label-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 24px;
+  background-color: #dfdfdf;
+  border-radius: 34px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Anahtarın yuvarlak kısmının stil */
+.toggle-switch .toggle-label-2::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+/* Anahtarın etkin hale gelmesindeki stil değişiklikleri */
+.toggle-switch .toggle-input:checked + .toggle-label-2 {
+  background-color: #4caf50;
+}
+
+.toggle-switch .toggle-input:checked + .toggle-label-2::before {
+  transform: translateX(16px);
+}
+
+/* Light tema */
+.toggle-switch.light .toggle-label-2 {
+  background-color: #bebebe;
+}
+
+.toggle-switch.light .toggle-input:checked + .toggle-label-2 {
+  background-color: #9b9b9b;
+}
+
+.toggle-switch.light .toggle-input:checked + .toggle-label-2::before {
+  transform: translateX(6px);
+}
+
+/* Dark tema */
+.toggle-switch.dark .toggle-label-2 {
+  background-color: #4b4b4b;
+}
+
+.toggle-switch.dark .toggle-input:checked + .toggle-label-2 {
+  background-color: #717171;
+}
+
+.toggle-switch.dark .toggle-input:checked + .toggle-label-2::before {
+  transform: translateX(16px);
+}
