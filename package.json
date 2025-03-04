@@ -1,6 +1,6 @@
 {
   "name": "basket-app-admin",
-  "homepage": "https://basketdemo.techashna.com/admin",
+  "homepage":".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
